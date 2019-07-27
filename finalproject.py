@@ -31,9 +31,7 @@ def make_alien():
 def make_alien2():
     """ makes an alien!
     """
-    # alien2 = frame( pos= vector(-13,2,1) )  # makes a new "frame" == a container
-    # with a local coordinate system that can have any number of parts...
-    # here are the "parts":
+    
     a = sphere( radius=1, color=vector(0,1,0) )
     b = sphere( radius=0.3, pos= vector(.7,.5,.2), color=vector(1,1,1) )
     c = cone( radius=0.2, pos= vector(.9,.2,.9), color=vector(1,0,0) ) #another object for a mouth
@@ -48,9 +46,7 @@ def make_alien2():
 def make_alien3():
     """ makes an alien!
     """
-    # alien3 = frame( pos= vector(-13,4,1) )  # makes a new "frame" == a container
-    # with a local coordinate system that can have any number of parts...
-    # here are the "parts":
+    
     a = sphere( radius=1, color=vector(0,1,0) )
     b = sphere( radius=0.3, pos= vector(.7,.5,.2), color=vector(1,1,1) )
     c = cone( radius=0.2, pos= vector(.9,.2,.9), color=vector(1,0,0) ) #another object for a mouth
@@ -65,9 +61,7 @@ def make_alien3():
 def make_alien4():
     """ makes an alien!
     """
-    # alien4 = frame( pos= vector(-13,6,1) )  # makes a new "frame" == a container
-    # with a local coordinate system that can have any number of parts...
-    # here are the "parts":
+    
     a = sphere( radius=1, color=vector(0,1,0) )
     b = sphere( radius=0.3, pos= vector(.7,.5,.2), color=vector(1,1,1) )
     c = cone( radius=0.2, pos= vector(.9,.2,.9), color=vector(1,0,0) ) #another object for a mouth
