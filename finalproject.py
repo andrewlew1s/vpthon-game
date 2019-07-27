@@ -1,10 +1,4 @@
-#
-# bounce.py
-#
-# builds from an example that comes with vPython
-#   docs: http://vpython.org/contents/docs/index.html
-#   gallery of shapes: http://vpython.org/contents/docs/primitives.html
-#ANDREW LEWIS START
+# MADE BY ANDREW LEWIS
 
 from vpython import *
 import random
@@ -18,18 +12,11 @@ def random_color():
     b = random.uniform(0.0,1.0)
     return (r,g,b)  # a color is a three-element tuple
 
-
 def make_alien():
-    """ makes an alien! -- in the process, this shows how to
-        group many objects into a single coordinate system ("frame")
-        and treat that as a single object
-        Docs here:  http://vpython.org/contents/docs/frame.html
+    """ makes an alien!
     """
     # ONE OF THE ALIENS HURT HIS NOSE BE NICE
 
-    # alien = frame( pos= vector(-13,-2,1) )  # makes a new "frame" == a container
-    # with a local coordinate system that can have any number of parts...
-    # here are the "parts":
     a = sphere( radius=1, color=vector(0,1,0) )
     b = sphere( radius=0.3, pos= vector(.7,.5,.2), color=vector(1,1,1) )
     c = cone( radius=0.2, pos= vector(.9,.2,.9), color=vector(1,0,0) )
@@ -39,13 +26,10 @@ def make_alien():
     
     alien = compound([a,b,c,d,e])
     alien.pos = vector(-13,-2,1)
-    return alien   # always use the _frame_, not any of its parts...
+    return alien 
 
 def make_alien2():
-    """ makes an alien! -- in the process, this shows how to
-        group many objects into a single coordinate system ("frame")
-        and treat that as a single object
-        Docs here:  http://vpython.org/contents/docs/frame.html
+    """ makes an alien!
     """
     # alien2 = frame( pos= vector(-13,2,1) )  # makes a new "frame" == a container
     # with a local coordinate system that can have any number of parts...
@@ -62,10 +46,7 @@ def make_alien2():
     return alien2   # always use the _frame_, not any of its parts...
 
 def make_alien3():
-    """ makes an alien! -- in the process, this shows how to
-        group many objects into a single coordinate system ("frame")
-        and treat that as a single object
-        Docs here:  http://vpython.org/contents/docs/frame.html
+    """ makes an alien!
     """
     # alien3 = frame( pos= vector(-13,4,1) )  # makes a new "frame" == a container
     # with a local coordinate system that can have any number of parts...
@@ -82,10 +63,7 @@ def make_alien3():
     return alien3   # always use the _frame_, not any of its parts...
 
 def make_alien4():
-    """ makes an alien! -- in the process, this shows how to
-        group many objects into a single coordinate system ("frame")
-        and treat that as a single object
-        Docs here:  http://vpython.org/contents/docs/frame.html
+    """ makes an alien!
     """
     # alien4 = frame( pos= vector(-13,6,1) )  # makes a new "frame" == a container
     # with a local coordinate system that can have any number of parts...
@@ -101,7 +79,6 @@ def make_alien4():
     alien4.pos = vector(-13,6,1)
     return alien4   # always use the _frame_, not any of its parts...
 
-
 def main():
     """ this is the main function, including all of the data objects 
         and the "event loop," which is the while True: loop that will
@@ -110,14 +87,9 @@ def main():
     # floor
     floor = box(length=80, height=30, width=.5, pos= vector(0,0,0), color=vector(0,2,0))
 
-    # ball
-    
+    # goals 
     goal1 = box(length=1.5, height=20,width=10, pos= vector(40,0,5), color=vector(1,1,1))
     goal2 = box(length=1.5, height=20,width=10, pos= vector(-40,0,5), color=vector(1,1,1))
-    
-
-    # Walls = make_walls() #creates a list of walls - what will be the netting (2 short, 1 long)
-    # w0, w1, w2 = Walls  
 
     alien = make_alien()
     alien.vel = vector(0,0,0)
@@ -128,8 +100,6 @@ def main():
     alien4 = make_alien4()
     alien4.vel = vector(0,0,0)
 
-
-
     ball = sphere( radius=1, pos= vector(10,0,1), color=vector(1,0.7,0.2) )
     ball.vel = vector(0,0,0)
     ball2 = sphere( radius=1, pos= vector(3,0,1), color=vector(1,2,0.2) )
@@ -137,17 +107,15 @@ def main():
     ball3 = sphere( radius=1, pos= vector(0,1,2), color=vector(1,2,0.2) )
     ball3.vel = vector(0,0,0)
     
-
     gravity = 9.8
     RATE = 30                # the number of times the while loop runs each second
     dt = 1.0/(1.0*RATE)      # the time step each time through the while loop
     scene.autoscale = False  # avoids changing the view automatically
     
-    
     while True:    # this is the "physics loop": each loop is one step in time, dt
         rate(RATE)
         count=0
-         # maximum # of times per second the while loop runs 
+        # maximum # of times per second the while loop runs 
 
         # +++ start of UPDATE SECTION - update all positions here, every time step
 
@@ -161,12 +129,9 @@ def main():
         
         # +++ end of UPDATE SECTION - be sure new objects are updated appropriately!
 
-
-
         # +++ start of COLLISION SECTION - check for collisions + do the "right" thing
 
-
-        #BALL BOUNDARIES
+        # BALL BOUNDARIES
         
         if ball.pos.z < floor.pos.z:  # w0 has the smallest x value
             ball.pos.z = floor.pos.z  # make sure we stay in bounds
@@ -422,9 +387,7 @@ def main():
                 ball.vel = vector(0,0,0)
                 alien.vel = vector(0,0,0)
 
-
         # +++ end of KEYBOARD SECTION - check for keypresses here + handle them
-
 
 # things start here!
 if __name__ == "__main__":
