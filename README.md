@@ -1,5 +1,15 @@
 ## AVOID THE  ALIENS AND SCORE GOALS - THE GAME
 
+Disclaimer:
+
+This was my first ever coding project. The code itself is kind of ridiculous, looking back with hindsight. The amount of nested ifs is somewhat insane, and if I were to do it again I would do it *very* differently. 
+
+However, the whole point is to keep this pure and exactly how I built it, and it makes me really happy.
+
+Initially built for Python 2.7 with vpython, but had to do some upgrades to make it run on python3 as some stuff changed with vpython apparently and it now runs with GlowScript:
+
+https://www.glowscript.org/
+
 Controls:
 
 Up - Move up on the Y plane
