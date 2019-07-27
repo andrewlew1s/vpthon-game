@@ -10,6 +10,12 @@ Initially built for Python 2.7 with vpython, but had to do some upgrades to make
 
 https://www.glowscript.org/
 
+To Play:
+
+- clone the repo
+- pip install vpython (if necessary)
+- python3 finalproject.py
+
 Controls:
 
 Up - Move up on the Y plane
